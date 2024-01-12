@@ -30,3 +30,4 @@ end
 require("lazy").setup(pluginList, opts)
 -------------------------------------------------------------
 plugins.telescope.setup()--Setup Telescope
+
