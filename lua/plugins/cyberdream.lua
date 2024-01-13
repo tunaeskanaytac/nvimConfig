@@ -1,4 +1,4 @@
-local plugin = {
+return {
   "scottmckendry/cyberdream.nvim",
   lazy = false,
   priority = 1000,
@@ -16,5 +16,3 @@ local plugin = {
       vim.cmd("hi FloatBorder ctermbg=NONE guibg=#42E66C")
   end,
 }
-
-return {plugin = plugin}
