@@ -8,7 +8,8 @@ return {
 				null_ls.builtins.formatting.stylua,
 			},
 		})
-
-		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format)
+    -- MOVED TO WHICHKEY ----------------------------------
+		--vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format)
+    -------------------------------------------------------
 	end,
 }
