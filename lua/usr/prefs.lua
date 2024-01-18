@@ -5,4 +5,7 @@ vim.cmd("set shiftwidth=2") -- indentation space
 vim.g.mapleader = ' ' -- set leader key as space
 vim.keymap.set("n", "<leader>fd", "<Cmd>Ex<CR>")
 vim.cmd("command Nohi nohlsearch")
+vim.opt.number = true
+vim.opt.relativenumber = true
+
 print("prefs loaded")
