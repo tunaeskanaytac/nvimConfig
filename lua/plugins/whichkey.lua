@@ -22,7 +22,7 @@ return {
         h = { "<Cmd>Telescope help_tags<CR>", "Telescope - Help Tags" },
       },
       ["<leader>g"] = {
-        name = "LSP",
+        name = "+LSP",
         d = { vim.lsp.buf.format, "LSP - Format Text" },
         e = { vim.diagnostic.open_float, "Diagnostic - Open Float" },
         q = { vim.diagnostic.setloclist, "Diagnostic - Open List" },
@@ -35,7 +35,27 @@ return {
         },
         K = { vim.lsp.buf.hover, "LSP - Hover documentation" },
         c = { vim.lsp.buf.code_action, "LSP - Code Actions" },
+      },
+      ["<leader>r"] = {
+        name = "+refactor",
+        i = { "<Cmd>Refactor inline_var<CR>", "Inline Variable" },
+        I = { "<Cmd>Refactor inline_func<CR>", "Inline Function" },
+        b = { 
+          name = "Extract Block...",
+          b = { "<Cmd>Refactor extract_block<CR>", "Extract Block" },
+          f = { "<Cmd>Refactor extract_block_to_file<CR>", "Extract Block to File"}
+        },
       }
     })
+    wk.register({
+      ["<leader>r"] = {
+        name = "+refactor",
+        e = { "<Cmd>Refactor extract<CR>", "Extract Function" },
+        f = { "<Cmd>Refactor extract_to_file<CR>", "Extract Function to File" },
+        v = { "<Cmd>Refactor extract_var<CR>", "Extract Variable" },
+        i = { "<Cmd>Refactor inline_var<CR>", "Inline variable" },
+      }
+
+    },{mode = "x"})
   end,
 }
