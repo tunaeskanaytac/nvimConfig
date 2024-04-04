@@ -35,6 +35,7 @@ return {
         },
         K = { vim.lsp.buf.hover, "LSP - Hover documentation" },
         c = { vim.lsp.buf.code_action, "LSP - Code Actions" },
+        r = { vim.lsp.buf.rename, "LSP - Rename Token"},
       },
       ["<leader>r"] = {
         name = "+refactor",
